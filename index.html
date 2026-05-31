@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - Binderlyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #04021A;
+      --bg-end:     #080320;
+      --surface:    #100B35;
+      --surface2:   #160F40;
+      --accent:     #3D7FFF;
+      --accent-lt:  #7BA8FF;
+      --foil:       #BB44FF;
+      --text:       #EDECFF;
+      --text-muted: #8878CC;
+      --border:     #211860;
+      --border-lt:  #2E2280;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: linear-gradient(160deg, var(--bg) 0%, var(--bg-end) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Stars background ──────────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(61,127,255,.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 72% 8%,  rgba(187,68,255,.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 45%, rgba(61,127,255,.3)  0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 70%, rgba(187,68,255,.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 88%, rgba(61,127,255,.4)  0%, transparent 100%),
+        radial-gradient(1px 1px at 8%  55%, rgba(237,236,255,.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 75%, rgba(237,236,255,.15)0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────────── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── Header ────────────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .app-icon {
+      display: block;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 0 24px rgba(61,127,255,.5)) drop-shadow(0 0 48px rgba(187,68,255,.3));
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .divider {
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--foil), transparent);
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    .highlight {
+      color: var(--accent-lt);
+      font-weight: 500;
+    }
+
+    /* ── Sections ──────────────────────────────────────────────────── */
+    section {
+      margin-bottom: 32px;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: border-color 0.2s;
+    }
+
+    .section-card:hover {
+      border-color: var(--border-lt);
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent-lt);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(61,127,255,.15);
+      border: 1px solid rgba(61,127,255,.3);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    ul li {
+      font-size: 14px;
+      color: var(--text);
+      padding: 6px 0 6px 22px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8px;
+      top: 10px;
+    }
+
+
+    /* ── Contact ───────────────────────────────────────────────────── */
+    .contact-link {
+      color: var(--accent-lt);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(123,168,255,.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: #fff;
+      border-color: var(--accent-lt);
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .page { padding: 40px 16px 80px; }
+      .section-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header>
+      <img class="app-icon" src="./app_icon.png" alt="Binderlyst" />
+      <h1>Terms of Service</h1>
+      <p class="subtitle">Effective date: 31 May 2026</p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- Overview -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">📄</span>Overview</h2>
+        <p>
+          These Terms of Service (&ldquo;Terms&rdquo;) cover your use of Binderlyst
+          (the &ldquo;app&rdquo;). By downloading, installing, or using the app, you're
+          agreeing to them. If you don't agree, please don't use the app.
+        </p>
+        <p>
+          They're meant to be read alongside the
+          <a class="contact-link" href="https://binderlyst.github.io/Binderlyst-Privacy/" target="_blank" rel="noopener">Privacy Policy</a>,
+          which explains how your data is handled.
+        </p>
+      </div>
+    </section>
+
+    <!-- What Binderlyst Is -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🃏</span>What Binderlyst Is</h2>
+        <p>
+          Binderlyst is a tool for scanning, searching, organising, and reporting on a
+          personal trading card collection. At this point in time it's built for
+          Magic: The Gathering cards. It's intended for your own personal,
+          non-commercial use.
+        </p>
+      </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">✅</span>Eligibility</h2>
+        <p>
+          You should be old enough to enter into an agreement in your country before
+          using the app. Binderlyst isn't aimed at children under 13, and I don't
+          knowingly collect anything from them.
+        </p>
+      </div>
+    </section>
+
+    <!-- Licence & Fair Use -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🔑</span>Licence &amp; Fair Use</h2>
+        <p>
+          I grant you a personal, non-exclusive, non-transferable licence to install and
+          use Binderlyst on devices you own or control, in line with these Terms and
+          Google Play's Terms of Service. I keep all rights in the app itself, including
+          its code, design, and branding.
+        </p>
+        <p>When using the app, please don't:</p>
+        <ul>
+          <li>use it for anything unlawful or against these Terms;</li>
+          <li>copy, modify, distribute, sell, or lease any part of the app;</li>
+          <li>reverse engineer or try to extract the source code, except where the law specifically allows it;</li>
+          <li>interfere with the app or the services it relies on, including third-party card databases.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Your Collection -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">📦</span>Your Collection</h2>
+        <p>
+          Your collection is stored locally on your device. There's no account and no
+          server holding your cards, and I don't have access to them. You're responsible
+          for your own device and your own backups. Uninstalling the app, clearing its
+          data, or losing your device can permanently remove your collection, and I won't
+          be able to recover it for you.
+        </p>
+        <p>
+          I'd recommend exporting your collection regularly using the export options in
+          the app. CSV, Excel and PDF are all supported.
+        </p>
+      </div>
+    </section>
+
+    <!-- Card Data & Prices -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🏷️</span>Card Data &amp; Prices</h2>
+        <p>
+          Card names, set details, images, rarities, types and prices come from third
+          parties, including
+          <a class="contact-link" href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>,
+          a free and open trading card database. This information is provided for
+          convenience and can be inaccurate, incomplete or out of date.
+        </p>
+        <p>
+          <strong>Prices and values are estimates only.</strong> They aren't an offer, a
+          valuation, or a guarantee of what a card can be bought or sold for. Please don't
+          rely on the app as your only source when buying, selling, trading, insuring or
+          valuing cards. Card data and images remain the property of their respective owners.
+        </p>
+      </div>
+    </section>
+
+    <!-- No Affiliation -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🚫</span>No Affiliation</h2>
+        <p>
+          Binderlyst is unofficial, fan-made software. It is
+          <strong>not affiliated with, endorsed, sponsored, or approved by Wizards of the
+          Coast LLC</strong>, Hasbro, or Scryfall. Magic: The Gathering, card names, card
+          images and related marks are trademarks and copyright of Wizards of the Coast
+          LLC. Those materials belong to their respective owners and are used only to help
+          you identify and manage cards you already own.
+        </p>
+      </div>
+    </section>
+
+    <!-- Disclaimers & Liability -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🛡️</span>Disclaimers &amp; Liability</h2>
+        <p>
+          Binderlyst is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;,
+          without warranties of any kind. I can't guarantee the app will always be
+          available, error-free or secure, that scanning and recognition will be accurate,
+          or that card data and prices will be correct or current.
+        </p>
+        <p>
+          To the fullest extent allowed by law, I won't be liable for any loss of data,
+          value, profit or opportunity, or any indirect or consequential loss, arising
+          from your use of (or inability to use) the app, including any decisions made
+          based on what the app shows you. Nothing here removes rights you have as a
+          consumer that can't be excluded under applicable law.
+        </p>
+      </div>
+    </section>
+
+    <!-- Changes & Ending Use -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">📋</span>Changes &amp; Ending Use</h2>
+        <p>
+          Binderlyst is new and actively being developed, so features may be added,
+          changed, or removed, and these Terms may be updated from time to time. If they
+          change, I'll update the effective date at the top of this page. Continuing to
+          use the app after that means you accept the updated Terms.
+        </p>
+        <p>
+          You can stop using Binderlyst at any time by uninstalling it. I may also suspend
+          access if the app is misused or these Terms are breached.
+        </p>
+      </div>
+    </section>
+
+    <!-- Governing Law -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">🏛️</span>Governing Law</h2>
+        <p>
+          These Terms are governed by the laws of England and Wales, and any disputes fall
+          under the courts of England and Wales. This doesn't affect any mandatory
+          consumer-protection rights you have where you live.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="section-card">
+        <h2><span class="icon">✉️</span>Contact</h2>
+        <p>
+          If you have questions about these Terms, you can reach me at
+          <a class="contact-link" href="mailto:binderlyst@hotmail.com">binderlyst@hotmail.com</a>.
+          I'm currently studying while also working full-time, so responses may take a
+          little time, but I'll do my best to get back to you as soon as I can.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Trading Card Collection Manager &nbsp;·&nbsp; Android</p>
+      <p>© 2026 Binderlyst. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
