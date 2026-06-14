@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service - Binderlyst</title>
+  <title>Terms of Service | Binderlyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -24,6 +24,7 @@
       --border-lt:  #2E2280;
     }
 
+    /* Dark root background so mobile overscroll/bounce never flashes white. */
     html { scroll-behavior: smooth; background: var(--bg-end); }
 
     body {
@@ -36,7 +37,7 @@
       min-height: 100vh;
     }
 
-    /* ── Stars background ──────────────────────────────────────────── */
+    /* Stars background */
     body::before {
       content: '';
       position: fixed;
@@ -53,7 +54,7 @@
       z-index: 0;
     }
 
-    /* ── Layout ────────────────────────────────────────────────────── */
+    /* Layout */
     .page {
       position: relative;
       z-index: 1;
@@ -62,7 +63,7 @@
       padding: 60px 24px 100px;
     }
 
-    /* ── Header ────────────────────────────────────────────────────── */
+    /* Header */
     header {
       text-align: center;
       margin-bottom: 56px;
@@ -104,7 +105,7 @@
       font-weight: 500;
     }
 
-    /* ── Sections ──────────────────────────────────────────────────── */
+    /* Sections */
     section {
       margin-bottom: 32px;
     }
@@ -185,7 +186,7 @@
     }
 
 
-    /* ── Contact ───────────────────────────────────────────────────── */
+    /* Contact */
     .contact-link {
       color: var(--accent-lt);
       text-decoration: none;
@@ -199,7 +200,7 @@
       border-color: var(--accent-lt);
     }
 
-    /* ── Footer ────────────────────────────────────────────────────── */
+    /* Footer */
     footer {
       text-align: center;
       margin-top: 64px;
@@ -226,7 +227,7 @@
     <header>
       <img class="app-icon" src="./app_icon.png" alt="Binderlyst" />
       <h1>Terms of Service</h1>
-      <p class="subtitle">Effective date: 31 May 2026</p>
+      <p class="subtitle">Effective date: 14 June 2026</p>
       <div class="divider"></div>
     </header>
 
@@ -266,8 +267,8 @@
         <h2><span class="icon">✅</span>Eligibility</h2>
         <p>
           You should be old enough to enter into an agreement in your country before
-          using the app. Binderlyst isn't aimed at children under 13, and I don't
-          knowingly collect anything from them.
+          using the app. Binderlyst isn't aimed at children under 13, and Binderlyst
+          doesn't knowingly collect anything from them.
         </p>
       </div>
     </section>
@@ -275,12 +276,12 @@
     <!-- Licence & Fair Use -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">🔑</span>Licence &amp; Fair Use</h2>
+        <h2><span class="icon">📜</span>Licence &amp; Fair Use</h2>
         <p>
-          I grant you a personal, non-exclusive, non-transferable licence to install and
-          use Binderlyst on devices you own or control, in line with these Terms and
-          Google Play's Terms of Service. I keep all rights in the app itself, including
-          its code, design, and branding.
+          Binderlyst grants you a personal, non-exclusive, non-transferable licence to
+          install and use the app on devices you own or control, in line with these Terms
+          and Google Play's Terms of Service. All rights in the app itself, including its
+          code, design, and branding, are reserved.
         </p>
         <p>When using the app, please don't:</p>
         <ul>
@@ -292,20 +293,27 @@
       </div>
     </section>
 
-    <!-- Your Collection -->
+    <!-- Your Collection & Backups -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">📦</span>Your Collection</h2>
+        <h2><span class="icon">📦</span>Your Collection &amp; Backups</h2>
         <p>
-          Your collection is stored locally on your device. There's no account and no
-          server holding your cards, and I don't have access to them. You're responsible
-          for your own device and your own backups. Uninstalling the app, clearing its
-          data, or losing your device can permanently remove your collection, and I won't
-          be able to recover it for you.
+          By default, your collection is stored locally on your device. There's no
+          Binderlyst account and no server holding your cards, so they aren't accessible
+          to the developer. You're responsible for your own device and your own backups.
+          Uninstalling the app, clearing its data, or losing your device can permanently
+          remove locally stored data, and the developer won't be able to recover it for you.
         </p>
         <p>
-          I'd recommend exporting your collection regularly using the export options in
-          the app. CSV, Excel and PDF are all supported.
+          Binderlyst offers an optional backup to your own Google Drive. This is provided
+          on a best-effort basis and isn't guaranteed: backups may fail, be incomplete, or
+          be unavailable, and the developer can't recover them for you. Data you back up is
+          stored in your own Google Drive and is also subject to Google's terms and privacy
+          policy. You remain responsible for keeping your own copies.
+        </p>
+        <p>
+          Exporting your collection regularly using the in-app export options is
+          recommended. CSV, Excel and PDF are all supported.
         </p>
       </div>
     </section>
@@ -351,15 +359,16 @@
         <h2><span class="icon">🛡️</span>Disclaimers &amp; Liability</h2>
         <p>
           Binderlyst is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;,
-          without warranties of any kind. I can't guarantee the app will always be
-          available, error-free or secure, that scanning and recognition will be accurate,
-          or that card data and prices will be correct or current.
+          without warranties of any kind. There is no guarantee that the app will always
+          be available, error-free or secure, that scanning and recognition will be
+          accurate, that card data and prices will be correct or current, or that backups
+          will always succeed or be recoverable.
         </p>
         <p>
-          To the fullest extent allowed by law, I won't be liable for any loss of data,
-          value, profit or opportunity, or any indirect or consequential loss, arising
-          from your use of (or inability to use) the app, including any decisions made
-          based on what the app shows you. Nothing here removes rights you have as a
+          To the fullest extent allowed by law, the developer won't be liable for any loss
+          of data, value, profit or opportunity, or any indirect or consequential loss,
+          arising from your use of (or inability to use) the app, including any decisions
+          made based on what the app shows you. Nothing here removes rights you have as a
           consumer that can't be excluded under applicable law.
         </p>
       </div>
@@ -368,16 +377,16 @@
     <!-- Changes & Ending Use -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">📋</span>Changes &amp; Ending Use</h2>
+        <h2><span class="icon">🔄</span>Changes &amp; Ending Use</h2>
         <p>
           Binderlyst is new and actively being developed, so features may be added,
           changed, or removed, and these Terms may be updated from time to time. If they
-          change, I'll update the effective date at the top of this page. Continuing to
-          use the app after that means you accept the updated Terms.
+          change, the effective date at the top of this page will be updated. Continuing
+          to use the app after that means you accept the updated Terms.
         </p>
         <p>
-          You can stop using Binderlyst at any time by uninstalling it. I may also suspend
-          access if the app is misused or these Terms are breached.
+          You can stop using Binderlyst at any time by uninstalling it. Access may also be
+          suspended if the app is misused or these Terms are breached.
         </p>
       </div>
     </section>
@@ -385,7 +394,7 @@
     <!-- Governing Law -->
     <section>
       <div class="section-card">
-        <h2><span class="icon">🏛️</span>Governing Law</h2>
+        <h2><span class="icon">⚖️</span>Governing Law</h2>
         <p>
           These Terms are governed by the laws of England and Wales, and any disputes fall
           under the courts of England and Wales. This doesn't affect any mandatory
@@ -399,10 +408,9 @@
       <div class="section-card">
         <h2><span class="icon">✉️</span>Contact</h2>
         <p>
-          If you have questions about these Terms, you can reach me at
+          If you have questions about these Terms, you can get in touch at
           <a class="contact-link" href="mailto:binderlyst@hotmail.com">binderlyst@hotmail.com</a>.
-          I'm currently studying while also working full-time, so responses may take a
-          little time, but I'll do my best to get back to you as soon as I can.
+          Responses may take a little time, but you'll get a reply as soon as possible.
         </p>
       </div>
     </section>
