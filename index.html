@@ -19,20 +19,19 @@
     --accent2:#b98cff;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;background:var(--bg)}
   body{
     font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     color:var(--text);
     line-height:1.65;
     background:
       radial-gradient(1200px 600px at 50% -200px,rgba(139,108,255,.18),transparent 70%),
-      linear-gradient(180deg,var(--bg),var(--bg2));
-    background-attachment:fixed;
+      linear-gradient(180deg,var(--bg),var(--bg2)) no-repeat;
     min-height:100vh;
     padding:40px 20px 64px;
   }
   .wrap{max-width:760px;margin:0 auto}
-  .logo{width:96px;height:96px;display:block;margin:0 auto 20px;border-radius:22px}
+  .logo{width:112px;height:112px;display:block;margin:0 auto 20px;border-radius:24px;filter:drop-shadow(0 6px 22px rgba(139,108,255,.45))}
   h1{
     font-size:clamp(28px,6vw,40px);
     font-weight:700;
@@ -41,7 +40,9 @@
     background:linear-gradient(90deg,var(--accent2),var(--accent));
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  .eff{text-align:center;color:var(--muted);font-size:14px;margin:10px 0 40px}
+  .eff{text-align:center;color:var(--muted);font-size:14px;margin:10px 0 16px}
+  .rule{height:3px;width:140px;margin:0 auto 40px;border-radius:3px;
+    background:linear-gradient(90deg,#b98cff,#8b6cff,#5ee0ff)}
   h2{
     font-size:20px;font-weight:700;margin:34px 0 12px;
     padding-bottom:10px;border-bottom:1px solid var(--border);
@@ -63,6 +64,7 @@
   <img class="logo" src="./app_icon.png" alt="Binderlyst">
   <h1>Terms of Service</h1>
   <p class="eff">Effective date: 2 July 2026</p>
+  <div class="rule"></div>
 
   <h2>📄 Overview</h2>
   <p>These Terms of Service ("Terms") cover your use of Binderlyst (the "app"). By downloading, installing, or using the app, you're agreeing to them. If you don't agree, please don't use the app.</p>
